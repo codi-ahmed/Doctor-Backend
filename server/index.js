@@ -17,6 +17,11 @@ app.use(express.json());
 const connectDB = require('./config/db');
 connectDB();
 
+app.get("/test", (req, res) => {
+  res.send("Hello from backend!");
+});
+
+
 //routes 
 app.use('/api/doctors' , doctorsRoute);
 app.use('/api/customer', patientsRoute);
